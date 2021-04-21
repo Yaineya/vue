@@ -1,0 +1,51 @@
+body{
+    background-color: rgba(156, 176, 212, 0.534);
+}
+.wrapper{
+    padding:0 8% ;
+}
+
+h1{
+    font-size: 30px;
+}
+
+.inp{
+    padding: 10px 0 10px 0;
+}
+
+input{
+    width: 100%;
+    height: 28px;
+    font-size: 24px;
+}
+
+.addtask{
+    width: 150px;
+    height: 40px;
+    background-color:seagreen;
+    border-radius: 20px;
+    font-size: 24px;
+    color: snow;
+    outline: none;
+    &:hover{
+        background-color:rgb(23, 66, 42);
+    }
+}
+
+li{
+    padding-bottom: 10px;
+    font-size: 30px;
+}
+
+.delete{
+    width: 150px;
+    height: 40px;
+    background-color:rgb(241, 171, 143);
+    border-radius: 20px;
+    font-size: 24px;
+    color: snow;
+    outline: none;
+    &:hover{
+        background-color:rgb(235, 118, 72);
+    }
+}

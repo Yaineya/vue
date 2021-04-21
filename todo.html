@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/style.css">
+    <title>Список заметок</title>
+</head>
+<body>
+    <div class="wrapper" id="root">
+        <div class="todo">
+            <h1>
+               {{ title }}
+            </h1>
+        </div>
+        <div class="inp">
+            <input type="text" 
+                v-bind:value="inputValue" 
+                :placeholder="myPlaceholder" 
+                v-on:input="changeValueInput"
+                @keypress.enter ="addNewNote"
+                />
+        </div>
+        <div class="btn">
+            <button class="addtask" @click="addNewNote">Add note</button>
+        </div>
+        <hr>
+        <div>
+            <ul class="list" v-if="notes.lenght !== 0">
+                <!--цикл для элемента myNote в массиве notes >-->
+                <li class="newNote" v-for="(myNote, index) in notes">
+                    {{ toUpperCase(myNote) }}
+                    <button class="delete" @click="deleteNote(index)">
+                        Delete note
+                    </button>
+                </li>
+            </ul>
+            <!-- <div v-else>
+                Заметок пока нет.
+            </div> -->
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script> 
+
+</body>
+</html> 
